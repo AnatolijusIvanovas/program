@@ -43,13 +43,16 @@ mod tests {
 	fn bad_result() {
 		let query = "";
 		let contents = "one, two, three";
-		assert_ne!(vec!["safe, fast, productive,"], search(query, contents));
+		assert_ne!(vec!["safe, fast, productive"], search(query, contents));
 	}
 	
+	#[test]
 	fn good_result() {
 		let query = "";
 		let contents = "safe, fast, productive";
-		assert_eq!(vec!["safe, fast, productive,"], search(query, contents));
+		assert_eq!(vec!["safe, fast, productive"], search(query, contents));
 	}
+	
+	
 	
 }
