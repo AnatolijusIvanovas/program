@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
 
-use program::Config;
+use ugrep::Config;
 
 fn main() {
 	let config = Config::new(env::args()).unwrap_or_else(|err| {
@@ -11,7 +11,7 @@ fn main() {
 
     println!("Searching in file {} for {}", config.filename, config.query);
 	
-	if let Err(e) = program::run(config) {
+	if let Err(e) = ugrep::run(config) {
         eprintln!("Application error: {}", e);
         process::exit(1);
     }

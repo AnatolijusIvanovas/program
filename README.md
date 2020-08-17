@@ -1,6 +1,6 @@
 # program
 
-This is comand line tool (cli) searching regular expressions in files.
+Command-line tool (clt) searching regular expressions in files.
 
 Current status: in development.
 
