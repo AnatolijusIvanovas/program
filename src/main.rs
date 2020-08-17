@@ -9,7 +9,7 @@ fn main() {
         process::exit(1);
     });
 
-    println!("Searching in file {} for {}", config.filename, config.query);
+    println!("Searching in file {} for {} :", config.filename, config.query);
 	
 	if let Err(e) = ugrep::run(config) {
         eprintln!("Application error: {}", e);
